@@ -364,7 +364,7 @@ const ammoTypeExotic = [
                         "Hungry"]
     },
     {
-        "name": "Aggresively Invasive Bio Capsule",
+        "name": "Aggressively Invasive Bio Capsule",
         "dieMod": -1,
         "nonLethalMod": null,
         "illegalMod": null,
