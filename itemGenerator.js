@@ -908,6 +908,7 @@ function generateGun() {
         }
     }
 
+    if (baseWeapon.totalValue < 20){baseWeapon.totalValue = 20;}
     console.log(baseWeapon);
     console.log(ammoType);
     console.log(weaponMods);
