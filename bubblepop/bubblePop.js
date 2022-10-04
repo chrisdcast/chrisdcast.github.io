@@ -72,24 +72,28 @@ function popBubble(event) {
 
     bubbleRect = event.target.getClientRects();
     //Create some bubble droplets
-    for (let i = 0; i < 4; i++){
+    for (let i = 0; i < 6; i++){
         let droplet = document.createElement('div');
         droplet.classList.add('bubbleDrop');
 
         body.appendChild(droplet);
 
         let spawnX = bubbleRect[0].left + (bubbleRect[0].width / 2);
+        let newX = (spawnX - 60) + (Math.random() * 120);
         let spawnY = bubbleRect[0].top + (bubbleRect[0].height / 2);
-        let randomRotation = Math.floor(Math.random() * 360);
+        let newY = (spawnY - 60) + (Math.random() * 120);
 
         droplet.style.left = `${spawnX}px`;
+        droplet.style.setProperty('--newX', `${newX}px`);
         droplet.style.top = `${spawnY}px`;
-        // droplet.style.transform = `rotate(${randomRotation}deg)`;
+        droplet.style.setProperty('--newY', `${newY}px`);
 
         setTimeout(() => {
             body.removeChild(droplet);
         }, 500)
     }
+
+    new Audio('Assets/zapsplat_cartoon_bubble_pop_006_40278.mp3').play();
 }
 
 function updateGame() {
