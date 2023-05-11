@@ -1,0 +1,264 @@
+:root {
+    --itemCardMaxWidth: 675px;
+    --itemCardMinHeight: 200px;
+    --tabSize: 35px;
+    --cornerRadius: 10px;
+    --animDegrees: -45deg;
+
+    --paletteCommon: #43b8e2;
+    --paletteUncommon: #C2DF00;
+    --paletteRare: #e23ca0;
+    --paletteIllegal: #f7e334;
+    --paletteLightText: #DEDCCE;
+    --palettePageBackground: #2F252F;
+}
+
+html {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--palettePageBackground);
+}
+
+nav {
+    height: 2em;
+    background-color: #000000;
+}
+
+.activeArea {
+    display: block;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.itemCardBorder {
+    position: relative;
+    overflow: hidden;
+    margin: 45px auto;
+    margin-bottom: 0px;
+    padding: 3px;
+    max-width: var(--itemCardMaxWidth);
+    /* min-height: var(--itemCardMinHeight); */
+    border: 3px solid black;
+    /* background: var(--paletteCommon); */
+    /* background: linear-gradient(var(--animDegrees),
+                                #113d4d 0%,
+                                var(--paletteCommon) 50%,
+                                #113d4d 100%); */
+}
+
+.itemCardBorder:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 500%;
+    top: -200%;
+    left: -50%;
+    z-index: -1;
+    background: linear-gradient(#0b2630 0%,
+                                #0b2630 45%,
+                                var(--paletteCommon) 50%,
+                                #0b2630 55%,
+                                #0b2630 100%);
+
+    animation: spin 2.5s linear infinite;
+}
+
+/* .borderRarityUncommon {
+    border: 3px solid black;
+} */
+
+.borderRarityUncommon:before {
+    background: linear-gradient(#171a07 0%,
+                                #171a07 45%,
+                                var(--paletteUncommon) 50%,
+                                #171a07 55%,
+                                #171a07 100%);
+}
+
+.borderRarityRare:before {
+    background: linear-gradient(#14080f 0%,
+                                #14080f 45%,
+                                var(--paletteRare) 50%,
+                                #14080f 55%,
+                                #14080f 100%);
+}
+
+.itemCard {
+    /* min-height: var(--itemCardMinHeight); */
+
+    border: 3px solid #000000;
+    background: rgb(34, 33, 33);
+    background: linear-gradient(0deg, 
+                            rgb(20, 20, 20) 0%, 
+                            rgb(62, 63, 63) 100%);
+}
+
+.cardRow {
+    padding: 0px 10px;
+
+    text-align: left;
+    color: var(--paletteLightText);
+}
+
+.rowName {
+    padding: 10px 10px;
+    color: var(--paletteCommon);
+    border-bottom: 3px solid var(--paletteCommon);
+}
+
+.rowNameRarityUncommon {
+    color: var(--paletteUncommon);
+    border-bottom: 3px solid var(--paletteUncommon);
+}
+
+.rowNameRarityRare {
+    color: var(--paletteRare);
+    border-bottom: 3px solid var(--paletteRare);
+}
+
+.rowIllegalBG {
+    background-color: var(--paletteIllegal);
+    padding: 5px;
+}
+
+.rowIllegalText {
+    background-color: var(--paletteIllegal);
+    padding: 5px;
+    font-size: .5em;
+}
+
+.rowAmmoDmg {
+    display:flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+}
+
+.ammoRow {
+    flex-basis: 275px;
+    flex-grow: 1;
+    padding-top: 10px;
+    vertical-align: bottom;
+
+    border-bottom: 3px solid var(--paletteLightText);
+}
+
+.dmgTab {
+    flex-basis: calc(var(--tabSize) * 3);
+    min-height: calc(var(--tabSize) * 1.5);
+    border-bottom-left-radius: var(--cornerRadius);
+    border-bottom-right-radius: var(--cornerRadius);
+    padding-top: 10px;
+
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1;
+
+    background-color: var(--paletteCommon);
+}
+
+.dmgTabRarityUncommon {
+    background-color: var(--paletteUncommon);
+    color: var(--palettePageBackground);
+}
+
+.dmgTabRarityRare {
+    background-color: var(--paletteRare);
+}
+
+.featureRow {
+    flex-basis: 275px;
+    flex-grow: 1;
+    margin: 0px 10px 10px 10px;
+    padding: 0px;
+
+    border-bottom: 3px solid var(--paletteLightText);
+}
+
+.featureTab {
+    display:inline-block;
+    position: relative;
+    vertical-align: bottom;
+    width: var(--tabSize);
+    height: var(--tabSize);
+    border-top-left-radius: var(--cornerRadius);
+    border-top-right-radius: var(--cornerRadius);
+    text-align: center;
+
+    background-color: var(--paletteLightText);
+}
+
+.tabIcon {
+    width: calc((var(--tabSize) / 5) * 4);
+    height: calc((var(--tabSize) / 5) * 4);
+    vertical-align: middle;
+    
+    color: var(--palettePageBackground);
+}
+
+.featureName {
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 75%;
+
+    font-size: .8em;
+    line-height: 1;
+}
+
+.featureDetails {
+    margin: 0px;
+    padding: 0px 10px;
+    list-style-type: "×";
+}
+
+.featureDetailItem {
+    padding-left: 5px;
+    padding-bottom: 10px;
+
+    font-size: .8em;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.valueTab {
+    display: inline-block;
+    width: calc(var(--tabSize) * 4);
+    height: var(--tabSize);
+    padding: 10px 5px 5px 5px;
+    border-top-left-radius: var(--cornerRadius);
+    border-top-right-radius: var(--cornerRadius);
+
+    color: var(--paletteLightText);
+    background-color: black;
+}
+
+.regenerateButton {
+    border:none;
+    background-color: #000000;
+    min-height: calc(var(--tabSize) * 2);
+    width: calc(var(--tabSize) * 6);
+    border-bottom-left-radius: var(--cornerRadius);
+    border-bottom-right-radius: var(--cornerRadius);
+
+    color: var(--paletteLightText);
+    font-family: inherit;
+    font-size: 1em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        /* --animDegrees: 0deg; */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* --animDegrees: 180deg; */
+    }
+}

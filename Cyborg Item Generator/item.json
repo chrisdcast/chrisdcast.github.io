@@ -1,0 +1,82 @@
+{"baseGun":[
+    {
+        "name": "Mini Pistol",
+        "dmgDie": 1,
+        "totalValue": 40,
+        "totalRank": 10,
+        "bpMod": 2,
+        "isAuto": false,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Pistol",
+        "dmgDie": 2,
+        "totalValue": 60,
+        "totalRank": 5,
+        "bpMod": 5,
+        "isAuto": false,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "SMG",
+        "dmgDie": 2,
+        "totalValue": 150,
+        "totalRank": 10,
+        "bpMod": 3,
+        "isAuto": true,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Revolver",
+        "dmgDie": 3,
+        "totalValue": 50,
+        "totalRank": 15,
+        "bpMod": 5,
+        "isAuto": false,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Shotgun",
+        "dmgDie": 3,
+        "totalValue": 350,
+        "totalRank": 10,
+        "bpMod": 4,
+        "isAuto": false,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Assault Rifle",
+        "dmgDie": 3,
+        "totalValue": 400,
+        "totalRank": 10,
+        "bpMod": 2,
+        "isAuto": true,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Pulse Rifle",
+        "dmgDie": 4,
+        "totalValue": 800,
+        "totalRank": 15,
+        "bpMod": 3,
+        "isAuto": true,
+        "isIllegal": false,
+        "isNonLethal": false
+    },
+    {
+        "name": "Sniper Rifle",
+        "dmgDie": 8,
+        "totalValue": 1000,
+        "totalRank": 15,
+        "bpMod": 6,
+        "isAuto": false,
+        "isIllegal": false,
+        "isNonLethal": false
+    }
+]}
