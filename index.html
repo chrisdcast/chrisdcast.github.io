@@ -20,45 +20,83 @@
 </head>
 
 <body>
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-4" id="portrait">
+    <header class="container-fluid pt-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 text-center" id="portrait">
                 This is picture
             </div>
-            <div class="col-8">
-                <div class="card" id="title">
-                    <div class="container">
-                        <div class="row" id="name">
-                            Chris</br>
-                            Castaneda
-                        </div>
-                        <div class="row" id="description">
-                            HTX Based Designer & Developer
-                        </div>
+            <div class="col-sm-6">
+                <div class="d-flex flex-column" id="nameCard">
+                    <div class="row-sm pb-2 text-uppercase" id="name">
+                        Chris</br>
+                        Castaneda
+                    </div>
+                    <div class="row-sm text-uppercase" id="description">
+                        HTX Based Designer & Developer
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <nav class="container-fluid text-center">
-        <div class="row">
-            <div class="col">
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <nav class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="row container-fluid">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn text-uppercase fs-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#thumbsPrint" aria-expanded="false" aria-controls="thumbsPrint">
                     Print
-                  </button>
+                </button>
             </div>
-            <div class="col">
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn text-uppercase fs-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Web
-                  </button>
+                </button>
             </div>
-            <div class="col">
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn text-uppercase fs-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Dev
-                  </button>
+                </button>
             </div>
         </div>
     </nav>
+    <!-- PRINT EXAMPLES -->
+    <div class="container-fluid" id="thumbsPrint">
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center py-3">
+                <div class="card" type="button" data-bs-toggle="modal" data-bs-target="#modalPrint_01">
+
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center py-3">
+                <div class="card">
+
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center py-3">
+                <div class="card">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PRINT MODALS -->
+    <div class="modal fade" id="modalPrint_01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    There's some info going here
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
