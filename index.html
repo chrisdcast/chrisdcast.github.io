@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
 </head>
 
@@ -64,8 +64,11 @@
     <div class="container-fluid" id="thumbsPrint">
         <div class="row">
             <div class="col-md-4 d-flex justify-content-center py-3">
-                <div class="card" type="button" data-bs-toggle="modal" data-bs-target="#modalPrint_01">
-
+                <div class="card" type="button" data-bs-toggle="modal" data-bs-target="#modalPrint-01">
+                    <div class="card-body">
+                        <img class="card-img-top" src="Assets/Portfolio-Thumb-Print-WereOpen.jpg"
+                            alt="We're Open Thumbnail">
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 d-flex justify-content-center py-3">
@@ -81,19 +84,31 @@
         </div>
     </div>
     <!-- PRINT MODALS -->
-    <div class="modal fade" id="modalPrint_01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade modal-lg modal-fullscreen-md-down" id="modalPrint-01" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header flex-column">
+                    <div class="container text-start">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title" id="modalPrint-01-Label">Dealership Grand Opening Template
+                        </h1>
+                        <p class="text-secondary">Direct mail template designed for dealerships advertising a grand
+                            opening,
+                            reopening, or reassuring customers that they are open during construction.</p>
+                        <h3>Sofware Used</h3>
+                        <p>Photoshop | InDesign</p>
+                    </div>
                 </div>
                 <div class="modal-body">
-                    There's some info going here
+                    <img class="img-fluid pb-2" src="Assets/Portfolio-Print-WereOpen-01-2500x4048.jpg"
+                        alt="We're Open Front Side 11x17">
+                    <img class="img-fluid pb-2" src="Assets/Portfolio-Print-WereOpen-02-2500x4048.jpg"
+                        alt="We're Open Back Side 11x17">
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
