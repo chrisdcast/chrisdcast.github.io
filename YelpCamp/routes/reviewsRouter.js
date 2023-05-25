@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 const catchAsync = require('../utils/CatchAsync');
 const { reviewSchema } = require('../Schemas');
+const { isLoggedIn } = require('../middleware');
 const ExpressError = require('../utils/ExpressError');
 const Campground = require('../models/campground');
 const Review = require('../models/review.js');
@@ -16,7 +17,7 @@ const validateReview = (req, res, next) => {
     }
 }
 
-router.post('/', validateReview, catchAsync(async (req, res, next) => {
+router.post('/', isLoggedIn, validateReview, catchAsync(async (req, res, next) => {
     const campground = await Campground.findById(req.params.id);
     const review = new Review(req.body.review);
     campground.reviews.push(review);
@@ -26,7 +27,7 @@ router.post('/', validateReview, catchAsync(async (req, res, next) => {
     res.redirect(`/campgrounds/${campground.id}`);
 }))
 
-router.delete('/:reviewId', catchAsync(async (req, res, next) => {
+router.delete('/:reviewId', isLoggedIn, catchAsync(async (req, res, next) => {
     const { id, reviewId } = req.params;
     await Campground.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
     await Review.findByIdAndDelete(reviewId);
