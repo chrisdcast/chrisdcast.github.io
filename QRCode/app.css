@@ -27,7 +27,7 @@ body {
 
   & img {
     display: block;
-    max-width: 100%;
+    max-width: 288px;
     margin-bottom: 25px;
     border-radius: 15px;
   }
